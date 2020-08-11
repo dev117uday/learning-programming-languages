@@ -5,3 +5,4 @@ Learning Different Programming Languages
 - Octave
 - Rust
 - Julia
+- JavaScript and Typescript
