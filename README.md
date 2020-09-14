@@ -7,3 +7,4 @@ Learning Different Programming Languages
 - Julia
 - JavaScript and Typescript
 - Vuejs
+- Julia
