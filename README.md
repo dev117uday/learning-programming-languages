@@ -6,3 +6,4 @@ Learning Different Programming Languages
 - Rust
 - Julia
 - JavaScript and Typescript
+- Vuejs

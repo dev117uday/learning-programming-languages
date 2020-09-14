@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/vue"></script>
+
+  <title>VueJs</title>
+</head>
+
+<body>
+  <div id="vue-first-instance">
+    <br>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12">
+          <h1>{{ first_name  }} : {{ last_name }}</h1>
+          <h4>{{ greet('afternoon') }}</h4>
+          <a target="_blank" v-bind:href="website" class="btn btn-info">To my profile</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="vue-second-instance">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Start counter</h2>
+          <h4>Counter : {{ counter }} </h4>
+          <button v-on:click="counter++" class="btn btn-success">+1</button>
+          <button v-on:click="counter--" class="btn btn-danger">-1</button>
+          <br> <br>
+          <button v-on:click.once="add(1)" class="btn btn-success">+1</button>
+          <button v-on:click="sub(1)" class="btn btn-danger">-1</button>
+          <br> <br>
+          <button v-on:dblclick="add(10)" class="btn btn-success">+10</button>
+          <button v-on:dblclick="sub(10)" class="btn btn-danger">-10</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="vue-third-instance">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Let's play with text</h2> <br>
+          <h4>Enter your name : </h4>
+          <input type="text" class="form-control" v-model="name" />
+          <span> Name : {{ name }} </span>
+          <br> <br>
+          <h4>Enter your age : </h4>
+          <input type="number" min="0" max="100" class="form-control" v-model="age" />
+          <span> Age : {{ age }} </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="vue-fourth-instance">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Computer Properties</h1>
+          <h2>Start counter</h2>
+          <button v-on:click="counter++" class=" btn btn-info">Add to counter</button>
+          <button v-on:click="A++" class="btn btn-success">Add to A</button>
+          <button v-on:click="B++" class="btn btn-primary">Add to B</button>
+          <button v-on:click="reset" class=" btn btn-danger">Reset</button>
+          <h4>Counter : {{ counter }} <br>
+            A - {{A}} <br>
+            B - {{B}} </h4>
+          <h4>Counter + A : {{ addToA }} </h4>
+          <h4>Counter + B : {{ addToB }} </h4>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="vue-fifth-instance">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Oscillating Button</h2>
+          <span v-if="show_button">
+            <button v-on:click="show_button=!show_button" class="btn btn-success">Success</button>
+          </span>
+          <span v-else="show_button">
+            <button v-on:click="show_button=!show_button" class="btn btn-danger">Danger</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="vue-sixth-instance">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>For loop in vue.js</h2>
+          <ul>
+            <li v-for="name in names">{{ name }}</li>
+          </ul>
+          <ul>
+            <li v-for="human in people">Name : {{ human.name }}, Age : {{ human.age }} </li>
+          </ul>
+
+          <p v-for="(human, index) in people">{{ index+1 }}. Name : {{ human.name }}, Age : {{ human.age }} </p>
+
+          <p>this is template</p>
+          <template v-for="human in people">
+            <div v-for="(val,key) in human ">
+              <p> {{ key }} : {{ val }} </p>
+            </div>
+          </template>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br> <br>
+
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
