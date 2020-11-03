@@ -1,0 +1,10 @@
+fw = open('sample.txt', 'w')
+fw.write('writin\' something to the file \n')
+fw.write('hey, this is second line \n')
+fw.write('this is the third line')
+fw.close()
+
+fr = open('sample.txt', 'r')
+text = fr.readlines(2)
+print(text)
+fr.close()
