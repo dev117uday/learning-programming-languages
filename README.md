@@ -1,6 +1,5 @@
-# Learning programming Languages
-
-Learning Different Programming Languages 
+# Learning stuff
+Learning Different Things
 
 - Octave
 - Rust
@@ -8,3 +7,5 @@ Learning Different Programming Languages
 - JavaScript and Typescript
 - Vuejs
 - Julia
+- csharp (going on...)
+- docker
