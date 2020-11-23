@@ -1,6 +1,9 @@
 # Learning stuff
 Learning Different Things
 
+- c++
+- java
+- Bash
 - Octave
 - Rust
 - Julia
