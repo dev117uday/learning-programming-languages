@@ -9,3 +9,4 @@ Learning Different Things
 - Julia
 - csharp (going on...)
 - docker
+- Python
