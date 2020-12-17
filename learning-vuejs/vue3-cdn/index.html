@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./lib/vue.js"></script>
+    <link rel="stylesheet" href="./lib/boot.css">
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/popper.js"></script>
+    <script src="./lib/boot.js"></script>
+    <title>Learning Vue</title>
+</head>
+
+<body>
+
+    <br>
+    <h1 class="text-center">Hello World</h1>
+    <br>
+    <div id="app" class="container">
+        <h4>{{ msg }}</h4>
+        <h5>Sender's Name : {{ name }}</h5>
+        <h5>Sender's age : {{ age }}</h5>
+        <p v-if="ageInfo">{{ ageMsg }}</p>
+        <p v-if="age >= 30">{{ ageMsg }}</p>
+        <h5>Enter Senders name : </h5>
+        <textarea v-model="inputName"></textarea>
+        <br>
+        <button class="btn btn-success" :click="sendName">Add the sender's name</button> &nbsp;
+        <button class="btn btn-warning" :click="funcAgeMsg">Tell about age</button>
+        <br> <br>
+        <button class="btn btn-primary" :click="increaseAge">Increase the Age of msg sender</button> &nbsp;
+        <button class="btn btn-danger" :click="decreaseAge">Decrease the Age of msg sender</button>
+        <br> <br> <br>
+        <ul>
+            <li v-for="book in books">
+                {{ book.name }}
+            </li>
+        </ul>
+
+        <ul>
+            <li v-for="friend in friendsComp">
+                {{ friend.name }}
+            </li>
+        </ul>
+
+        <a target="_blank" :href="url"><button class="btn">Resume Site</button></a>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
+
+<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. -->
+
+<!-- while handling event, pass the first parameter as $event -->
+<!-- :class="{ fav 'vairable' : varBool }" -->
